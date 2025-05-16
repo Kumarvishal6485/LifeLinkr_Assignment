@@ -5,7 +5,7 @@
     $data = [$_GET['name'], $_GET['email'], $_GET['phone'], $_GET['course']];  
 
     /**
-     * insert statemtn of new student in the db , and execute the query
+     * insert statement of new student in the db , and execute the query
      */
     try {
         $statement = "INSERT INTO students (`name`, `email`, `phone`, `course`) VALUES (?, ?, ?, ?)";
