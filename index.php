@@ -8,7 +8,7 @@
                 ?>
                     <section>
                 <?php 
-                    echo $_SESSION['msg'];
+                    echo $_SESSION['msg'];    //print the message of the session , let the user know about operation
                     unset($_SESSION['msg']);
                 ?>  
                     <a class="button" href="index.php">X</a>
@@ -18,13 +18,16 @@
         ?>
         <table>
         <?php
+            /**
+             * check whether the search query exist or not , if exist then fetch the data according the user's search , else fetch all the data from the db
+             */
             if (isset($_GET['search']) && $_GET['search'] != "") {
                 $search = "%".$_GET['search']."%";
                 $statement = "SELECT * FROM students WHERE `name` LIKE ? OR `course` LIKE ?";
-                $data = queryExecute($statement, [$search,$search], $conn);
+                $data = queryExecute($statement, [$search,$search], $conn); // executes the required query
             } else {
                 $statement = "SELECT * FROM students";
-                $data = queryExecute($statement,[], $conn);
+                $data = queryExecute($statement,[], $conn); //executes the required query
             }
             $sno = 1;
             if ($data && count($data)) {

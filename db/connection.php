@@ -4,7 +4,7 @@
         $password = "";
         $db = "student_management_system";
         $host = "localhost";
-        $conn = new PDO("mysql:host=$host;dbname=$db",$username,$password);
+        $conn = new PDO("mysql:host=$host;dbname=$db",$username,$password); // creating connection of the db 
         if (!$conn) {
             throw Exception("Can't Connect To the DB"); 
         }

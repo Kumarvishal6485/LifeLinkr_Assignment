@@ -2,11 +2,15 @@
     if (!isset($_GET['id'])) {
         header("Location:index.php");
     }
-    include_once "db/connection.php";
-    include_once "db/query.php";
-    include_once "backend/validation.php";
-    include_once "components/header.php";
-    include_once "components/navbar.php";
+    include_once "db/connection.php";   // db connection
+    include_once "db/query.php";        // db query file
+    include_once "backend/validation.php";  //validation file
+    include_once "components/header.php";   //header component
+    include_once "components/navbar.php";   // navbar component
+
+    /**
+     * check whether the id is present in the query string or not if present then fetch the corresponding data from the db
+     */
     if (isset($_GET['id'])) {
         $statement = "SELECT * FROM students WHERE id = ?";
         $id = $_GET['id'];
