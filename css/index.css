@@ -1,0 +1,77 @@
+*{
+    margin : 0;
+    padding :0;
+}
+
+header {
+    background-color: #2e23239c;
+}
+
+header a {
+    color : #ffffff;
+    text-decoration: none;
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+}
+
+header ul li{
+    padding : 10px 15px;
+}
+
+ul{
+    list-style : none;
+}
+
+.validation{
+    color : #ff0000;
+}
+
+section {
+  background: #a1a1a1;
+  color: white;
+  padding: 10px 20px !important;
+  margin: 20px 0px !important;
+  width: fit-content !important;
+}
+
+input{
+    padding : 6px !important;
+}
+
+form[method="POST"]{
+    padding : 6px !important;
+}
+
+table{
+    padding : 6px !important;
+    border : 1px solid black;
+}
+
+fieldset{
+    padding: 10px !important;
+    width: max-content !important;
+}
+
+td{
+    border : 1px solid black;
+    padding : 6px !important;
+}
+
+.button{
+    padding : 4px 5px !important;
+    background-color: #00000042;
+    color : #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-edit{
+    background-color : #64a107;
+}
+
+.btn-delete{
+    background-color : red;
+}
